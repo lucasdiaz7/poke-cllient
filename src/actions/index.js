@@ -1,8 +1,9 @@
 import axios from 'axios';
+const {REACT_APP_SERVER} = process.env
 
 // export function allPoke(){
 //     return async function(dispatch){
-//         fetch("http://localhost:3001/pokemons")
+//         fetch(`${REACT_APP_SERVER}/pokemons`)
 //         .then(res => res.json())
 //         .then(data => dispatch({
 //             type: 'ALLPOKE',
@@ -13,7 +14,7 @@ import axios from 'axios';
 
 export function allPoke(){
     return async function(dispatch){
-        var json = await axios.get("http://localhost:3001/pokemons")
+        var json = await axios.get(`${REACT_APP_SERVER}/pokemons`)
         return dispatch({
             type:'ALLPOKE',
             payload: json.data 
@@ -23,7 +24,7 @@ export function allPoke(){
 
 export function getName(name){
     return async function(dispatch){
-        fetch(`http://localhost:3001/pokemons?name=${name}`)
+        fetch(`${REACT_APP_SERVER}/pokemons?name=${name}`)
         .then(r => r.json())
         .then(data =>dispatch({
             type: 'GETNAME',
@@ -35,7 +36,7 @@ export function getName(name){
 export function pokeDetail(id){
     return async function(dispatch){
     try {
-        var json = await axios.get(`http://localhost:3001/pokemons/${id}`)
+        var json = await axios.get(`${REACT_APP_SERVER}/pokemons/${id}`)
         return dispatch({
             type: 'POKEDETAIL',
             payload: json.data
@@ -47,7 +48,7 @@ export function pokeDetail(id){
 
 export function getTypes(){
     return async function(dispatch){
-        var json = await axios.get("http://localhost:3001/types")
+        var json = await axios.get(`${REACT_APP_SERVER}/types`)
         return dispatch({
             type: 'GETTYPES',
             payload: json.data
@@ -85,7 +86,7 @@ export function attackOrder(payload){
 
 export function postPoke(payload){
     return async function(dispatch){
-        var json = await axios.post("http://localhost:3001/pokemons", payload)
+        var json = await axios.post(`${REACT_APP_SERVER}/pokemons`, payload)
         return dispatch({
             type: 'POSTPOKE',
             json
@@ -95,7 +96,7 @@ export function postPoke(payload){
 
 export function deletePoke(id){
     return async function(dispatch){
-        var delet= await axios.delete("http://localhost:3001/delete/" + id)
+        var delet= await axios.delete(`${REACT_APP_SERVER}/delete/` + id)
         return dispatch({
             type: 'DELETEPOKE',
             payload: delet.data
@@ -105,7 +106,7 @@ export function deletePoke(id){
 
 export function pokePut(id, payload){
     return async function(dispatch){
-        var json= await axios.put(`http://localhost:3001/pokemons/${id}`, payload)
+        var json= await axios.put(`${REACT_APP_SERVER}/pokemons/${id}`, payload)
         return dispatch({
             type: 'POKE_PUT', json
         })

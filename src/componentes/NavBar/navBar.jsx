@@ -19,11 +19,12 @@ export default function NavBar(){
                 </label>
                 {/* <img src={pokeBola} alt="imgnav" /> */}
                 <ul className={style.ul}>
-                    <li className={style.li}><a href="/home" className={style.a}>Home</a></li>
+                    {/* <li className={style.li}><a href="/home" className={style.a}>Home</a></li> */}
+                    <li className={style.li}><a><Link to="/home" className={style.a}>Home</Link> </a></li>
                     <li className={style.li}><a href="/" className={style.a}>Landing</a></li>
-                    <li className={style.li}><a href="" className={style.a}>About</a></li>
+                    {/* <li className={style.li}><a href="" className={style.a}>About</a></li> */}
                     {/* <li className={style.li}><a href="/pokemons" className={style.a}>Create Pokemon</a></li> */}
-                    <li className={style.li}><a ><Link to="/pokemons" className={style.a}>CREATE POKEMON</Link></a></li>
+                    <li className={style.li}><a ><Link to="/pokemons" className={style.a}>Create Pokemon</Link></a></li>
                 </ul>
             </nav>
         </div>

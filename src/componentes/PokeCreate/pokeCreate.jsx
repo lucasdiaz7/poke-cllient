@@ -170,7 +170,7 @@ export default function PokeCreate(){
                 </div>
                 <div className={style.grl}>
                     <label className={style.label}>Height:</label>
-                    <input type="number" value={input.height} name="height" min="0" onChange={e => handleChange(e)} min="0" className={style.input}/>
+                    <input type="number" value={input.height} name="height" onChange={e => handleChange(e)} min="0" className={style.input}/>
                     {errors.height && (
                         <p>{errors.height}</p>
                     )}

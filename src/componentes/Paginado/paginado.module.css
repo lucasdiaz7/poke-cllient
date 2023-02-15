@@ -1,0 +1,26 @@
+.paginado{
+	margin:20px 0;
+}
+
+.ul {
+	list-style:none;
+	text-align: center;
+}
+
+.li {
+	display:inline-block;
+	margin-right:10px;
+}
+
+.a {
+	display:block;
+	padding:10px 15px;
+	background: #1f53c5;
+    color: #f3f3f3;
+	text-decoration: none;
+}
+
+.a:hover {
+	background: #334f8d;
+}
+

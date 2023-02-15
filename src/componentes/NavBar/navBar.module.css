@@ -1,0 +1,93 @@
+.div{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+.nav{
+    background: rgb(65,174,199);
+    background: linear-gradient(180deg, rgba(65,174,199,0.9697128851540616) 14%, rgba(36,48,60,1) 98%);
+    /* background: #1f53c5; */
+    height: 100px;
+    width: 100%;
+}
+
+.ul{
+    float: right;
+    margin-right: 20px;
+}
+
+.li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+.a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.a:hover{
+    background: #334f8d;
+    transition: .5s; 
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    /* me faltaria para el logo */
+    .a{
+        font-size: 16px;
+    }
+}
+/* que sea hasta pantallas de 858 px */
+@media (max-width: 740px){
+    .checkbtn{
+        display: block;
+    }
+    .ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        margin-left: -35px;
+        left: -111%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    .li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    .a{
+        font-size: 20px;
+    }
+    .a:hover , a.active{
+        background: none ;
+        color: red;
+    }
+    .check:checked ~ul{
+        left: 0;
+    }
+}

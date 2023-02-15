@@ -1,0 +1,38 @@
+.container{
+    position: absolute;
+    left: 48%;
+    top: 45px;
+    transform: translate(-50%, 50%);
+    padding: 10px;
+}
+.div{
+    display: flex;
+    justify-content: center;
+}
+
+.input{
+    border-radius: 10px;
+    border: 1px;
+    padding: 5px 4px 5px 4px;
+    background-color: #556589;
+    color: white;
+    margin: 5px 0px 5px 5px;
+}
+
+.input::placeholder { color: rgb(255, 255, 255); }
+
+.btn{
+    border-radius: 10px;
+    border: 1px;
+    padding: 5px 4px 5px 4px;
+    background-color: #556589;
+    color: white;
+    margin: 5px 5px 5px 0px; 
+}
+
+.i{
+    font-size: 25px;
+    color: white;
+    line-height: 80px;
+    transition: all .7 ease;
+}

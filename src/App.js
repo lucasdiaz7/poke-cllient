@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/home" component={Home}></Route>
         <Route path="/home/:id" component={PokemonDetail}></Route>
         <Route exact path="/pokemons" component={PokeCreate}></Route>
-        <Route path="/pokemons/:id" component={Update}></Route>
+        {/* <Route path="/pokemons/:id" component={Update}></Route> */}
         <Route exact path="/favourite" component={Favourite}></Route>
       </Switch>
 

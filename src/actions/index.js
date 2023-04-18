@@ -1,5 +1,6 @@
 import axios from 'axios';
-const {REACT_APP_SERVER} = process.env;
+// const {REACT_APP_SERVER} = process.env;
+const REACT_APP_SERVER= "https://api-pokemon.up.railway.app"
 
 // export function allPoke(){
 //     return async function(dispatch){
